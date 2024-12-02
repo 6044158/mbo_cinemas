@@ -1,0 +1,336 @@
+
+/* voor alle apparaten */
+
+*{
+    padding: 0;
+    margin: 0;
+ 
+
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+/* icons color */
+i{
+    color: #42D8FD;
+}
+i .fa_search{
+    background-color: #621C7B;
+}
+
+
+
+#logo_main img{
+    width: 35%;
+}
+
+header{
+    background-color: #621C7B ;
+    height: 15vh;   
+}
+#sub_nav{
+    display: block;
+}
+
+main{
+padding: 5% 2% 5% 2%;
+background-image: url('../img/backgroundhome.jpg');
+background-size: cover;
+
+}
+
+
+
+
+#welkom_text {
+    background-color: black;
+    width: 100%;
+    height: 30vh;
+    margin:2% 0% 2% 0%;
+
+  
+}
+#welkom_text p{
+    color: white;
+   padding: 50px;
+  
+   
+}
+
+
+
+/* slide show */
+
+.slide{
+position: relative;
+}
+.slide  a{
+position:absolute; /* de ouder moet relative positon hebben anders gaat deze niet werken*/
+top:200px;
+font-size: 2rem;
+
+}
+
+#slide_show{
+
+background-color: brown;
+
+position: relative;
+
+
+
+}
+#slide_show>div:nth-child(1){
+display: block;
+
+}
+.slide{
+/* om de fotos boven elkaar te zetten / de ouder slide show contanier heeft postion relative */
+position:absolute;
+display: none;
+
+}
+.slide h1{
+    position: relative;
+    left: 10%;
+  
+
+}
+
+.slide{
+    width: 100%;
+}
+.slide img{
+    width: 100%;
+    height: 40vh;
+}
+
+
+footer{
+   
+    background-color:  #621C7B;
+    height: 20vh;
+    
+  
+}
+
+
+
+#slide_show{
+    width: 70%;
+    height: 40vh;
+    justify-self: center;
+
+}
+
+
+
+
+
+
+
+/* desktop */
+
+@media screen and (min-width: 1024px) {
+    body{
+        background-color: antiquewhite;
+        size: 200px;
+    }
+   
+    #logo img ,  #logo_footer>img{
+    width: 100px;
+    height: 50px;
+       
+  
+    }
+    #icon_login img{
+        width: 90px;
+        height: 60px;
+           
+    }
+  
+    #icon_menu{
+        display: none;
+    }
+    header{
+        display: grid;
+        grid-template-rows: 1;
+        grid-template-columns: 10% 40% 40% 10%;
+        align-items: center;
+    }
+    #sub_nav{
+        
+        width: 100%;
+        justify-content: space-around;
+
+       
+    }
+    #sub_nav>a{
+        margin-left: 10px;
+        
+       
+    }
+
+    .search-container input{
+        width: 80%;
+    }
+
+
+
+
+
+
+    footer{
+   
+   
+    display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    footer>article{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+    footer>article:nth-child(3),footer>article:nth-child(1){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+    }
+    #logo_footer img {
+        height: 100%;
+        width: 150px;
+    }
+    
+
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+/* Ipad */
+@media screen and  (min-width:768px) and (max-width:1023px) {
+    /* body{
+        background-color: gray;
+    } */
+    #sub_nav{
+   
+       
+        justify-content: space-around;
+        align-items: center;
+       background-color: #a936d3;
+        width:100%;
+        height: 85vh;
+        /* sub nav boven de header dan laat ik die 50 px  naar benden */
+        position: absolute;
+        top:15vh;
+    }
+    
+ #icon_menu i{
+   font-size: 40px;
+   }
+
+    #sub_nav a{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+        /* afstand tussen ietms nav */
+        line-height: 80px;
+        font-size: 2rem;
+    
+    }
+    #sub_nav a:hover{
+        font-size:2.1rem ;
+        color: rgb(0, 204, 255);
+    }
+
+
+
+    #logo>img ,  #logo_footer>img{
+        width: 100px;
+        height: 50px;
+        }
+
+    header{
+        display:grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns:15% 50% 10% 15%;
+       background-color: #621C7B;
+       justify-content: center;
+       align-items: center;
+    
+    }
+    header img{
+        width: 100%;
+        height:10vh;
+    }
+
+    #icon_login, #icon_menu {
+        margin-top: 10px;
+    }
+    #icon_menu{
+        display: block;
+    }
+
+
+    /* slide show */
+
+    #slide_show{
+        width: 100%;
+
+        height: 50vh;
+        
+    }
+
+    .slide img{
+        width:100%;
+        height: 50vh;
+    }
+
+    footer{
+        display: grid;
+        grid-template-rows: 15vh;
+        grid-template-columns: 30% 40% 30%;
+        
+  
+    }
+    /* footer>article{
+        display: flex;
+    
+        justify-content: space-evenly;
+        align-items: center;
+    }*/
+    footer>article:nth-child(3),footer>article:nth-child(1){
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+    } 
+    footer img{
+        width: 150px;
+    }
+
+}
+
+
+
+
+
+
+/* mobiel telefoon */
+@media screen and (max-width:767px){
+   
+}
