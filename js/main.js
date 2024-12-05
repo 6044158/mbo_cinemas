@@ -1,7 +1,8 @@
     // sub menu laten aantonen en verborgen
     let menuIcon = document.getElementById("icon_menu");
     let subNav = document.getElementById("sub_nav");
-  
+    let navItemArray = document.getElementsByClassName(".nav_item");
+
     // update en controleer schermgroote bij laden en reszie 
     window.addEventListener('resize',checkSchermGroote );
     window.addEventListener('DOMContentLoaded',checkSchermGroote)
@@ -29,6 +30,9 @@
         }
        
     })
+    // for(let navItem of navItemArray){
+        
+    // }
     
 
 
@@ -36,12 +40,7 @@
    
    let slidesArray = document.getElementsByClassName("slide");
    let index = 0;
-
-//    for(let x of slidesArray){
-//    x.style.display = "block";
-//    }
-  
-    
+   
     setInterval(slideShow,1800)
     function slideShow(){
     //    veberg de huidige slide

@@ -33,6 +33,14 @@ header{
     display: block;
 }
 
+
+/* search button */
+
+.search-container button{
+    background-color: #621C7B;
+    border: none;
+}
+
 main{
 padding: 5% 2% 5% 2%;
 background-image: url('../img/backgroundhome.jpg');
@@ -40,13 +48,17 @@ background-size: cover;
 
 }
 
-
+/* backgournd imag voor alle de main */
+main{
+    background-image: url(../img/backgroundhome.jpg);
+    background-size:cover;
+}
 
 
 #welkom_text {
     background-color: black;
     width: 100%;
-    height: 30vh;
+    height: fit-content;
     margin:2% 0% 2% 0%;
 
   
@@ -178,9 +190,23 @@ footer{
 
 
 
+/* main film pagina */
+.film_pagina main img{
+    width: 100%;
+    height: 300px;
+   
+}
+#films_Welcom_img{
+    width: 100%;
+    height: 400px;
+  
+}
 
 
 
+
+
+/* footer */
     footer{
    
    
@@ -209,6 +235,8 @@ footer{
 
 
 } 
+
+
 
 
 
@@ -265,7 +293,7 @@ footer{
 
     header{
         display:grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr ;
         grid-template-columns:15% 50% 10% 15%;
        background-color: #621C7B;
        justify-content: center;
@@ -332,5 +360,118 @@ footer{
 
 /* mobiel telefoon */
 @media screen and (max-width:767px){
+    
+    #slide_show{
+        display: none;
+    }
+    #icon_login img,#logo img,#logo_footer img{
+    width: 80px;
+    height: 100%;
+    }
    
+
+    #sub_nav{
+   
+       
+        justify-content: space-around;
+        align-items: center;
+       background-color: #a936d3;
+        width:100%;
+        height: 85vh;
+        /* sub nav boven de header dan laat ik die 50 px  naar benden */
+        position: absolute;
+        top:15vh;
+    }
+       
+ #icon_menu i{
+    font-size: 40px;
+    }
+ 
+     #sub_nav a{
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+         /* afstand tussen ietms nav */
+         line-height: 80px;
+         font-size: 2rem;
+     
+     }
+     #sub_nav a:hover{
+         font-size:2.1rem ;
+         color: rgb(0, 204, 255);
+     }
+ 
+ 
+ 
+     #logo>img ,  #logo_footer>img{
+         width: 100px;
+         height: 50px;
+         }
+ 
+
+         /* gird area  header*/
+     header{
+        
+        display: grid;
+        height: 25vh;
+        grid-template-areas: "logo . . menu_icon . log_icon " " search search search search search search " ;
+        grid-gap: 10px;
+
+        background-color: #621C7B;
+       
+        align-items: center;
+     
+     }
+    header>article:nth-child(1){
+        grid-area: logo;
+        
+     }
+     header>article:nth-child(2){
+        grid-area: search;
+     }
+     header>article:nth-child(3){
+        grid-area: menu_icon;
+     }
+     header>article:nth-child(5){
+        grid-area: log_icon;
+     }
+   
+     .search-container form input {
+        margin-left: 2%;
+        width: 80%;
+        height: 5vh;
+     
+     }
+     .search-container button{
+        
+        font-size: 20px;
+     }
+    /* gird area header tot hier */
+
+     
+ 
+     #icon_login, #icon_menu {
+         /* margin-top: 2px; */
+     }
+     #icon_menu{
+         display: block;
+     }
+     
+
+  
+     footer{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+ 
+    /* alle rows in de footer */
+    footer article{
+        display: flex;
+        justify-content: space-around;
+        padding:10px;
+    }
+
+       
+
 }

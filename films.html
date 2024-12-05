@@ -43,7 +43,141 @@
         
     </header>
     <main>
-        
+       <section>
+            <article>
+                <h1>Flims</h1>
+                <img src="img/flim1.jpg" alt="" id="films_Welcom_img">
+            </article>
+        </section>
+
+        <div id="filter_en_sorteren_box">
+            <section id="filter_container">
+            <article id="filter_konpje">
+                    <button id="filter-icon" class="filter-icon">
+                        <i class="fas fa-filter"></i> Filter
+                    </button>
+            </article>
+            
+
+            <article id="filter_soorten">
+                <form method="get" action="#">
+                    <div>
+                        <label for="locatie_filter">Locatie</label>
+                        <select  id="locatie_filter">
+                            <option value="Plaats1">Plaats1</option>
+                            <option value="Plaats2">Plaats1</option>
+                            <option value="Plaats3">Plaats1</option>
+                            <option value="Plaats4">Plaats1</option>
+                        </select>
+                    </div>
+
+                    <div>
+                            <label for="datum_filter">  datum  </label>
+                            <select id="datum_filter">
+                                <option value="maand1">Maand1</option>
+                                <option value="maand2">Maand2</option>
+                                <option value="maand3">Maand3</option>
+                                <option value="maand4">Maand4</option>
+                                <option value="maand5">Maand5</option>
+                                <option value="maand6">Maand6</option>
+                            </select>
+                    </div>
+
+                    <div>
+                        <label for="Genre_filter">  Genre </label>
+                        <select id="Genre_filter">
+                            <option value="Genre1">Genre1</option>
+                            <option value="Genre2">Genre2</option>
+                            <option value="Genre3">Genre3</option>
+                            <option value="Genre4">Genre4</option>
+                            <option value="Genre5">Genre5</option>
+                        </select>
+                    </div>
+                    
+                    <!-- <button type="submit" naam="submit" id="toon_films_konpje">Toon Films</button> -->
+                 
+                </form>
+
+                    
+            </article>
+            </section>
+
+            
+            <section id="sorteren_container">
+
+            <article id="sorteren_konpje">  
+            
+                    <button id="sorteren_icon"><i id="sort-icon" class="fa fa-sort" aria-hidden="true"></i> Sorteer op
+                    </button>
+
+                </article>
+            
+                <article id="sorteren_soorten">
+                    <div>
+                        <form method="get" action="#">
+                            <select >
+                                <option value="sorteren1">sorteren1</option>
+                                <option value="sorteren2">sorteren1</option>
+                                <option value="sorteren3">sorteren3</option>
+                                <option value="sorteren4">sorteren4</option>
+                                <option value="sorteren5">sorteren5</option>
+                            </select>
+                         </form>
+                    </div>
+                </article>
+
+            </section>
+        </div>
+
+        <section>
+            <article id="films_container">
+
+                <article class="film 1">
+                    <img src="img/flim2.jpg">
+                    <h1>film1</h1>
+                </article>
+
+                <article class="film 2">
+                    <img src="img/flim2.jpg">
+                    <h1>film2</h1>
+                </article>
+
+                <article class="film 3">
+                    <img src="img/flim2.jpg">
+                    <h1>film3</h1>
+                </article>
+
+                <article class="film 4">
+                    <img src="img/flim2.jpg">
+                    <h1>film4</h1>
+                </article>
+
+                <article class="film 5">
+                    <img src="img/flim2.jpg">
+                    <h1>film5</h1>
+                </article>
+
+                <article class="film 6">
+                    <img src="img/flim2.jpg">
+                    <h1>film6</h1>
+                </article>
+
+                <article class="film 7">
+                    <img src="img/flim2.jpg">
+                    <h1>film7</h1>
+                </article>
+
+                <article class="film 8">
+                    <img src="img/flim2.jpg">
+                    <h1>film8</h1>
+                    <div>
+                        <button>Reserveer</button>
+                        <i></i>
+                    </div>
+                </article>
+
+        </section>
+           
     </main>
  
     <footer>
@@ -63,6 +197,119 @@
         </article>
 
     </footer>
-   <script src="./js/main.js" defer></script>
+   
+    
+    <style>
+        #filter_soorten,#sorteren_soorten{
+            display: none;
+        }
+        /* #toon_films_konpje{
+            width:340px;
+            height: 80px;
+            
+            background-color: #621C7B;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-left: 0;
+        } */
+        #filter_container button, #sorteren_container button{
+            width:340px;
+            height: 80px;
+            margin-top: 20px;
+            background-color: #621C7B;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        /* filter icon */
+        #filter_container i,  #sorteren_container i{
+            font-size: 40px;
+        }
+        /* filter label woord */
+        #filter-icon,#sorteren_icon{
+            font-size: 20px;
+        }
+
+        /* filter soorten  */
+      
+        #filter_soorten,#sorteren_soorten{
+            width:300px;
+          height: 20vh;
+            background-color:#621C7B;
+            padding: 20px;
+            margin-bottom: 20px;
+          
+       
+ 
+        }
+        #filter_soorten div,#sorteren_soorten div{
+            margin: 20px;
+            color:white;
+            font-size: 25px;
+           
+        }
+        #filter_soorten select,#sorteren_soorten select{
+            font-size: 20px;
+            background-color: #42D8FD;
+           
+        }
+        #filter_soorten option,#sorteren_soorten option{
+            color: white;
+        }
+
+        #films_container{
+            display:grid;
+            grid-template-areas: "film  film film" "film film film" "film film film" "film film film" ;
+            gap: 2%;
+            margin: 2%;
+        }
+        #films_container article:{
+            grid-area: film;
+        }
+       
+        /* sorteren en filter layout */
+        #filter_en_sorteren_box{
+            display: grid;
+            grid-template-areas: ". filter_container . . . . . . . . .  . . . .  sorteren_container";
+        }
+        #filter_container{
+            grid-area: filter_container;
+        }
+        #sorteren_container{
+            grid-area: sorteren_container;
+        }
+       
+
+      
+       
+    </style>
+     <script>
+        // filter item verbergen en aantonen
+        let filterKnopje = document.getElementById("filter_konpje");
+        let filterSoorten = document.getElementById("filter_soorten");
+
+        filterKnopje.addEventListener("click",function(){
+            if( filterSoorten.style.display === "block"){
+                filterSoorten.style.display = "none";
+            }else{
+                filterSoorten.style.display = "block";
+            }
+            
+        })
+        // sorteren items verbergen en aantonen
+        let sorterenSoorten = document.getElementById("sorteren_soorten");
+        let sorterenKonpje = document.getElementById("sorteren_konpje");
+
+        sorterenKonpje.addEventListener("click", function(){
+            if(sorterenSoorten.style.display === "none"){
+                sorterenSoorten.style.display ="block";
+            }else{
+                sorterenSoorten.style.display ="none";
+            }
+        })
+        
+    </script>
+  
 </body>
 </html>
